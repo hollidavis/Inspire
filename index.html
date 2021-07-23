@@ -37,6 +37,7 @@
 <!-- bg-transparent text-light at the body level-->
 
 <body class="debug">
+    <!-- Weather -->
     <header class="container-fluid">
         <div class="row h-100">
             <div class="col d-flex justify-content-end align-items-center">
@@ -44,27 +45,32 @@
             </div>
         </div>
     </header>
+    <!-- Clock & To Do -->
     <main class="container-fluid">
         <div class="row h-100 justify-content-end">
+            <!-- Clock -->
             <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
                 <div id="clock" class="clock"></div>
             </div>
-            <div class="col-md-4">
+            <!-- To Do -->
+            <div class="col-md-4 d-flex justify-content-end align-items-end">
                 <div id="todo">TO DO</div>
             </div>
         </div>
     </main>
+    <!-- Img Info & Quote -->
     <footer class="container-fluid">
-        <div class="row h-100">
+        <div class="row h-100 justify-content-start">
+            <!-- Img Info -->
             <div class="col-md-3">
                 <div id="img-info">IMG INFO</div>
             </div>
+            <!-- Quote -->
             <div class="col-md-6">
                 <div id="quote" class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus,
                     impedit!
                 </div>
             </div>
-            <div class="col-md-3"></div>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
