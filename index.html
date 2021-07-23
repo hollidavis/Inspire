@@ -12,10 +12,61 @@
     <title>Inspire</title>
 </head>
 
-<body>
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+
+    body.debug [class*="col"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+<!-- bg-transparent text-light at the body level-->
+
+<body class="debug">
+    <header class="container-fluid">
+        <div class="row h-100">
+            <div class="col d-flex justify-content-end align-items-center">
+                <div id="weather">WEATHER</div>
+            </div>
+        </div>
+    </header>
     <main class="container-fluid">
-        <div id="clock"></div>
+        <div class="row h-100 justify-content-end">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+                <div id="clock" class="clock"></div>
+            </div>
+            <div class="col-md-4">
+                <div id="todo">TO DO</div>
+            </div>
+        </div>
     </main>
+    <footer class="container-fluid">
+        <div class="row h-100">
+            <div class="col-md-3">
+                <div id="img-info">IMG INFO</div>
+            </div>
+            <div class="col-md-6">
+                <div id="quote" class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus,
+                    impedit!
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
