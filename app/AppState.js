@@ -2,7 +2,9 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-
+  toDo = []
+  completedCount = 0
+  toDoCount = 0
 }
 
 export const ProxyState = new Proxy(new AppState(), {

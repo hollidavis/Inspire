@@ -24,3 +24,12 @@ footer{
   height: 10vh;
 }
 
+.line{
+  border-bottom: 1px solid white;
+}
+
+.strikethrough{
+  text-decoration: line-through;
+  text-decoration-color: gray;
+  color: gray;
+}
