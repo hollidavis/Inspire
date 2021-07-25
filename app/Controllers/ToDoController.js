@@ -1,5 +1,4 @@
 import { ProxyState } from "../AppState.js"
-import { toDoApi } from "../Services/AxiosService.js"
 import { toDoService } from "../Services/ToDoService.js"
 
 function _drawToDo() {

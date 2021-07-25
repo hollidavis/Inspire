@@ -5,6 +5,8 @@ class AppState extends EventEmitter {
   toDo = []
   completedCount = 0
   toDoCount = 0
+
+  images = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

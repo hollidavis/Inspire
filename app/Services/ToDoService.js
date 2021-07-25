@@ -4,7 +4,6 @@ import ToDo from "../Models/ToDo.js";
 class ToDoService {
   async getToDo() {
     const res = await toDoApi.get()
-    console.log(res.data)
     ProxyState.toDo = res.data.map(t => new ToDo(t))
   }
   async createToDo(rawToDo) {
