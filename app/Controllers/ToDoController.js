@@ -14,13 +14,15 @@ function _drawToDo() {
 }
 
 function _drawCount() {
-  let template = '${ProxyState.completedCount}/${ProxyState.toDoCount}'
-  document.getElementById('count').innerHTML = template
-  // Look at Garden Shop to see how to render count
+  document.getElementById('completedCount').innerText = ProxyState.completedCount.toString()
+  document.getElementById('toDoCount').innerText = ProxyState.toDoCount.toString()
 }
 export default class ToDoController {
   constructor() {
     ProxyState.on('toDo', _drawToDo)
+    ProxyState.on('completedCount', _drawCount)
+    ProxyState.on('toDoCount', _drawCount)
+    _drawCount
     this.getToDo()
   }
   async getToDo() {
