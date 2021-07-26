@@ -1,15 +1,12 @@
 import { ProxyState } from "../AppState.js"
 import { imagesService } from "../Services/ImagesService.js"
 function _drawImg() {
-  let images = ProxyState.images
-  let template = ''
-  images.forEach(i => template += i.Template)
-  document.getElementById('bg-img').innerHTML = template
+  document.getElementById('bg-img').innerHTML = ProxyState.images.Template
 }
 export default class ImagesController {
   constructor() {
-    this.getImages
-    _drawImg
+    ProxyState.on('images', _drawImg)
+    this.getImages()
   }
 
   async getImages() {

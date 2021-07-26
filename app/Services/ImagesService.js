@@ -5,7 +5,7 @@ class ImagesService {
   async getImages() {
     const res = await imagesApi.get()
     console.log(res.data)
-    ProxyState.images = res.data.map(i => new Image(i))
+    ProxyState.images = new Image(res.data)
     console.log(ProxyState.images)
   }
 }

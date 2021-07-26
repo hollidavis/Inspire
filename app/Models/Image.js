@@ -6,7 +6,7 @@ export default class Image {
     return /*html*/`
     <style>
       body {
-        background - image: url('this.largeImgUrl');
+        background-image: url('${this.largeImgUrl}');
         background-size: cover;
         background-position: center;
         }
