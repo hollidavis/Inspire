@@ -7,6 +7,11 @@ class AppState extends EventEmitter {
   toDoCount = 0
 
   images = null
+  weather = null
+
+  celsius = 0
+
+  fahrenheit = 0
 }
 
 export const ProxyState = new Proxy(new AppState(), {

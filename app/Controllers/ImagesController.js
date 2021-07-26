@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { imagesService } from "../Services/ImagesService.js"
+
 function _drawImg() {
   document.getElementById('bg-img').innerHTML = ProxyState.images.Template
 }
