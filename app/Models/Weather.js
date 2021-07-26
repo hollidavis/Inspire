@@ -8,9 +8,9 @@ export default class Weather {
   get Template() {
     return /*html*/`
     <img src="http://openweathermap.org/img/wn/${this.icon}@2x.png" alt="${this.description}">
-    <div>
-        <p id = "temp"></p>
-        <p>${this.description}</p>
+    <div class = "mr-4 cursor" onclick = "app.weatherController.convert()">
+        <p class = "m-0"><span id = "temp"></span></p>
+        <p class = "m-0">${this.description}</p>
     </div>`
   }
 }

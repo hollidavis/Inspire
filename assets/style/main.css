@@ -10697,11 +10697,11 @@ header {
 
 main {
   flex-grow: 1;
-  height: 80vh;
+  height: 75vh;
 }
 
 footer {
-  height: 10vh;
+  height: 15vh;
 }
 
 .line {
@@ -10716,6 +10716,22 @@ footer {
 
 .text-shadow {
   text-shadow: 2px 2px 2px black;
+}
+
+.author {
+  opacity: 0;
+}
+
+.content:hover .author {
+  opacity: 1;
+}
+
+.bg-dark-half {
+  background-color: rgba(39, 39, 39, 0.75);
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
